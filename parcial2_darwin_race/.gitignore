@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# binarios compilados de Webots (cada uno compila con Build o make)
+webots/controllers/darwin_walker/darwin_walker
+webots/controllers/darwin_walker/build/
+*.o
+*.d
+# salidas temporales
+results/webots_colab/
+frames_*/
