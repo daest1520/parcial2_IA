@@ -9,3 +9,4 @@ webots/controllers/darwin_walker/build/
 # salidas temporales
 results/webots_colab/
 frames_*/
+informe/
