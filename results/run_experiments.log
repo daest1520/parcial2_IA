@@ -1,0 +1,101 @@
+Experimentos pendientes: ['E01', 'E02', 'E03', 'E04', 'E05', 'E06', 'E07', 'E08', 'E09', 'E10', 'E11', 'E12', 'E13', 'E14', 'E15', 'E16', 'E17', 'E18', 'E19', 'E20']
+[E01] DAC listo: succ=0.38 t=341s
+[E02] DAC listo: succ=0.38 t=351s
+[E01] PPO listo: succ=0.81 t=588s
+[E02] PPO listo: succ=0.52 t=609s
+[E01] DQN listo: succ=0.62 t=852s
+[E02] DQN listo: succ=0.92 t=870s
+[E01] A2C listo: succ=0.71 t=972s
+TERMINADO E01
+[E02] A2C listo: succ=0.29 t=992s
+TERMINADO E02
+[E03] DAC listo: succ=0.52 t=222s
+[E04] DAC listo: succ=0.25 t=215s
+[E03] PPO listo: succ=0.79 t=341s
+[E04] PPO listo: succ=0.83 t=328s
+[E03] DQN listo: succ=0.12 t=676s
+[E04] DQN listo: succ=0.48 t=664s
+[E04] A2C listo: succ=0.29 t=818s
+TERMINADO E04
+[E03] A2C listo: succ=0.96 t=858s
+TERMINADO E03
+[E05] DAC listo: succ=0.19 t=422s
+[E06] DAC listo: succ=0.79 t=425s
+[E05] PPO listo: succ=0.60 t=679s
+[E06] PPO listo: succ=0.96 t=681s
+[E05] DQN listo: succ=0.02 t=1069s
+[E06] DQN listo: succ=1.00 t=1066s
+[E05] A2C listo: succ=0.17 t=1278s
+TERMINADO E05
+[E06] A2C listo: succ=0.79 t=1279s
+TERMINADO E06
+[E07] DAC listo: succ=0.44 t=403s
+[E08] DAC listo: succ=0.77 t=386s
+[E07] PPO listo: succ=0.46 t=647s
+[E08] PPO listo: succ=0.96 t=620s
+[E07] DQN listo: succ=0.15 t=1002s
+[E08] DQN listo: succ=0.98 t=965s
+[E08] A2C listo: succ=0.77 t=1074s
+TERMINADO E08
+[E07] A2C listo: succ=0.10 t=1118s
+TERMINADO E07
+[E09] DAC listo: succ=0.79 t=205s
+[E10] DAC listo: succ=0.38 t=205s
+[E09] PPO listo: succ=0.88 t=311s
+[E10] PPO listo: succ=0.56 t=316s
+[E09] DQN listo: succ=1.00 t=477s
+[E10] DQN listo: succ=0.04 t=484s
+[E09] A2C listo: succ=0.81 t=575s
+TERMINADO E09
+[E10] A2C listo: succ=0.42 t=584s
+TERMINADO E10
+[E11] DAC listo: succ=0.21 t=195s
+[E12] DAC listo: succ=0.27 t=194s
+[E11] PPO listo: succ=0.52 t=313s
+[E12] PPO listo: succ=0.79 t=308s
+[E11] DQN listo: succ=0.15 t=500s
+[E12] DQN listo: succ=0.25 t=485s
+[E11] A2C listo: succ=0.29 t=644s
+[E12] A2C listo: succ=0.27 t=624s
+TERMINADO E11
+TERMINADO E12
+[E14] DAC listo: succ=0.73 t=387s
+[E13] DAC listo: succ=0.46 t=388s
+[E14] PPO listo: succ=0.90 t=612s
+[E13] PPO listo: succ=0.96 t=615s
+[E14] DQN listo: succ=0.94 t=982s
+[E13] DQN listo: succ=0.75 t=984s
+[E14] A2C listo: succ=0.88 t=1189s
+[E13] A2C listo: succ=0.83 t=1190s
+TERMINADO E14
+TERMINADO E13
+[E15] DAC listo: succ=0.31 t=255s
+[E16] DAC listo: succ=0.58 t=261s
+[E15] PPO listo: succ=0.81 t=484s
+[E16] PPO listo: succ=0.92 t=541s
+[E15] DQN listo: succ=0.44 t=894s
+[E16] DQN listo: succ=0.69 t=1043s
+[E15] A2C listo: succ=0.52 t=1121s
+TERMINADO E15
+[E16] A2C listo: succ=0.83 t=1304s
+TERMINADO E16
+[E17] DAC listo: succ=0.62 t=476s
+[E18] DAC listo: succ=0.00 t=423s
+[E17] PPO listo: succ=0.88 t=737s
+[E18] PPO listo: succ=0.00 t=669s
+[E17] DQN listo: succ=0.29 t=1132s
+[E18] DQN listo: succ=0.50 t=1021s
+[E17] A2C listo: succ=0.75 t=1347s
+TERMINADO E17
+[E18] A2C listo: succ=0.00 t=1203s
+TERMINADO E18
+[E19] DAC listo: succ=0.56 t=213s
+[E19] PPO listo: succ=0.90 t=457s
+[E20] DAC listo: succ=0.65 t=419s
+[E20] PPO listo: succ=0.96 t=683s
+[E19] DQN listo: succ=0.73 t=802s
+[E19] A2C listo: succ=0.31 t=900s
+TERMINADO E19
+[E20] DQN listo: succ=0.94 t=882s
+[E20] A2C listo: succ=0.62 t=983s
+TERMINADO E20

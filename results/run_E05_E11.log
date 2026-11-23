@@ -1,0 +1,11 @@
+Experimentos pendientes: ['E05', 'E11']
+[E05] DAC listo: succ=0.38 t=212s
+[E05] PPO listo: succ=0.56 t=329s
+[E05] DQN listo: succ=0.38 t=506s
+[E05] A2C listo: succ=0.33 t=603s
+TERMINADO E05
+[E11] DAC listo: succ=0.60 t=213s
+[E11] PPO listo: succ=0.67 t=337s
+[E11] DQN listo: succ=0.71 t=521s
+[E11] A2C listo: succ=0.75 t=626s
+TERMINADO E11

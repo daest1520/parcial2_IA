@@ -1,0 +1,62 @@
+{
+ "world": "carrera_S",
+ "track": {
+  "size": "S",
+  "start_frac": 0.0,
+  "goal_frac": 1.0,
+  "reverse": false,
+  "width": 1.0,
+  "margin": 0.6,
+  "chicane_amp": 0.2,
+  "n_obstacles": null,
+  "pedestrian": true,
+  "zones": true,
+  "seed": 0
+ },
+ "length": 13.661300039177917,
+ "grid_rotation": 2,
+ "mode": "race",
+ "shield": true,
+ "winner": "DQN",
+ "order": [
+  "DQN",
+  "PPO",
+  "A2C"
+ ],
+ "finish_time": {
+  "DAC": null,
+  "PPO": 451.00800000000004,
+  "DQN": 194.0,
+  "A2C": 520.0
+ },
+ "progress": {
+  "DAC": 0.3406593406593406,
+  "PPO": 1.0,
+  "DQN": 1.0,
+  "A2C": 1.0
+ },
+ "collisions": {
+  "DAC": 9,
+  "PPO": 42,
+  "DQN": 4,
+  "A2C": 8
+ },
+ "falls": {
+  "DAC": 3,
+  "PPO": 5,
+  "DQN": 1,
+  "A2C": 9
+ },
+ "shield_interventions": {
+  "DAC": 68,
+  "PPO": 299,
+  "DQN": 43,
+  "A2C": 277
+ },
+ "decisions": {
+  "DAC": 117,
+  "PPO": 444,
+  "DQN": 194,
+  "A2C": 462
+ }
+}

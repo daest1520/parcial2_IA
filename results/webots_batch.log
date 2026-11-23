@@ -1,0 +1,23 @@
+== carrera_S g0 13:25:21
+[race_brain] PPO cruza la meta en 183.0 s (puesto 1)
+== carrera_S g1 13:29:41
+[race_brain] DAC cruza la meta en 293.0 s (puesto 1)
+[race_brain] A2C cruza la meta en 333.0 s (puesto 2)
+[race_brain] DQN cruza la meta en 386.0 s (puesto 3)
+== carrera_S g2 13:32:34
+[race_brain] DQN cruza la meta en 194.0 s (puesto 1)
+[race_brain] PPO cruza la meta en 451.0 s (puesto 2)
+[race_brain] A2C cruza la meta en 520.0 s (puesto 3)
+== carrera_S g3 13:36:46
+[race_brain] PPO cruza la meta en 213.0 s (puesto 1)
+[race_brain] DAC cruza la meta en 518.0 s (puesto 2)
+== carrera_M g0 13:40:54
+[race_brain] PPO cruza la meta en 240.0 s (puesto 1)
+[race_brain] DAC cruza la meta en 432.0 s (puesto 2)
+[race_brain] A2C cruza la meta en 468.0 s (puesto 3)
+== carrera_M g1 13:47:48
+[race_brain] A2C cruza la meta en 490.0 s (puesto 1)
+[race_brain] DQN cruza la meta en 591.0 s (puesto 2)
+== carrera_L g0 13:54:40
+[race_brain] PPO cruza la meta en 660.0 s (puesto 1)
+DONE

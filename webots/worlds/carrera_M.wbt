@@ -1,0 +1,517 @@
+#VRML_SIM R2025a utf8
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotis/darwin-op/protos/Darwin-op.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+
+WorldInfo {
+  info [ "Parcial 2 IA - Carrera de DARwIn-OP: DAC (propio) vs PPO vs DQN vs A2C"
+         "Pista M 6.5x4.4 m, longitud 18.59 m" ]
+  title "carrera_M"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties { material1 "slippery" coulombFriction [ 0.25 ] }
+    ContactProperties { material1 "rough" coulombFriction [ 1.2 ] softCFM 0.003 }
+  ]
+}
+DEF VIEW Viewpoint {
+  orientation -0.3989 0.3989 0.8257 1.7611
+  position 3.2500 -1.9800 5.5250
+}
+TexturedBackground { }
+TexturedBackgroundLight { }
+Floor {
+  translation 3.2500 2.2000 0
+  size 8.5000 6.4000
+  tileSize 0.5 0.5
+}
+DEF APPEARANCES Group { children [
+  Shape { appearance DEF WALL_APP PBRAppearance { baseColor 0.85 0.85 0.9 roughness 0.6 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF SLIP_APP PBRAppearance { baseColor 0.55 0.8 1 roughness 0.05 metalness 0 transparency 0.2 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF ROUGH_APP PBRAppearance { baseColor 0.45 0.32 0.2 roughness 1 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF WHITE_APP PBRAppearance { baseColor 1 1 1 roughness 1 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF BLACK_APP PBRAppearance { baseColor 0.05 0.05 0.05 roughness 1 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF OBST_APP PBRAppearance { baseColor 0.95 0.45 0.1 roughness 0.5 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+  Shape { appearance DEF CYL_APP PBRAppearance { baseColor 0.85 0.1 0.15 roughness 0.5 metalness 0 } geometry Box { size 0.001 0.001 0.001 } }
+] }
+Solid { name "pared_izquierda" children [
+    Pose { translation 0.1502 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.3507 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.5511 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.7516 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.9520 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.1525 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.3529 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.5533 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.7538 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.9542 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.1547 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.3551 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.5556 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.7560 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.9565 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.1569 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.3574 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.5578 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.7583 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.9587 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.1592 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.3596 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.5600 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.7605 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.9602 1.1000 0.1500 rotation 0 0 1 -0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2189 0.05 0.3 } } ] }
+    Pose { translation 5.1105 1.1033 0.1500 rotation 0 0 1 0.0641 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1219 0.05 0.3 } } ] }
+    Pose { translation 5.1962 1.1185 0.1500 rotation 0 0 1 0.3307 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 5.2620 1.1505 0.1500 rotation 0 0 1 0.5746 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 5.3190 1.1988 0.1500 rotation 0 0 1 0.8264 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0967 0.05 0.3 } } ] }
+    Pose { translation 5.3625 1.2600 0.1500 rotation 0 0 1 1.0833 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0948 0.05 0.3 } } ] }
+    Pose { translation 5.3888 1.3289 0.1500 rotation 0 0 1 1.3290 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 5.3975 1.4024 0.1500 rotation 0 0 1 1.5759 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0954 0.05 0.3 } } ] }
+    Pose { translation 5.3874 1.4768 0.1500 rotation 0 0 1 1.8344 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0961 0.05 0.3 } } ] }
+    Pose { translation 5.3594 1.5457 0.1500 rotation 0 0 1 2.0835 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 5.3158 1.6047 0.1500 rotation 0 0 1 2.3280 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0941 0.05 0.3 } } ] }
+    Pose { translation 5.2577 1.6521 0.1500 rotation 0 0 1 2.5825 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0971 0.05 0.3 } } ] }
+    Pose { translation 5.1897 1.6837 0.1500 rotation 0 0 1 2.8373 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0941 0.05 0.3 } } ] }
+    Pose { translation 5.0923 1.6980 0.1500 rotation 0 0 1 3.0900 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1442 0.05 0.3 } } ] }
+    Pose { translation 4.9050 1.7118 0.1500 rotation 0 0 1 3.0570 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2715 0.05 0.3 } } ] }
+    Pose { translation 4.6653 1.7420 0.1500 rotation 0 0 1 2.9722 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2520 0.05 0.3 } } ] }
+    Pose { translation 4.4508 1.7826 0.1500 rotation 0 0 1 2.9348 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2248 0.05 0.3 } } ] }
+    Pose { translation 4.2645 1.8199 0.1500 rotation 0 0 1 2.9546 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1951 0.05 0.3 } } ] }
+    Pose { translation 4.1046 1.8442 0.1500 rotation 0 0 1 3.0327 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1687 0.05 0.3 } } ] }
+    Pose { translation 3.9635 1.8515 0.1500 rotation 0 0 1 -3.1290 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1543 0.05 0.3 } } ] }
+    Pose { translation 3.8281 1.8406 0.1500 rotation 0 0 1 -2.9955 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1579 0.05 0.3 } } ] }
+    Pose { translation 3.6839 1.8108 0.1500 rotation 0 0 1 -2.8874 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1770 0.05 0.3 } } ] }
+    Pose { translation 3.5209 1.7627 0.1500 rotation 0 0 1 -2.8269 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2032 0.05 0.3 } } ] }
+    Pose { translation 3.3337 1.7011 0.1500 rotation 0 0 1 -2.8207 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2309 0.05 0.3 } } ] }
+    Pose { translation 3.1192 1.6359 0.1500 rotation 0 0 1 -2.8694 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2577 0.05 0.3 } } ] }
+    Pose { translation 2.8771 1.5815 0.1500 rotation 0 0 1 -2.9672 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2791 0.05 0.3 } } ] }
+    Pose { translation 2.6161 1.5528 0.1500 rotation 0 0 1 -3.0954 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2871 0.05 0.3 } } ] }
+    Pose { translation 2.3547 1.5569 0.1500 rotation 0 0 1 3.0618 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2769 0.05 0.3 } } ] }
+    Pose { translation 2.1118 1.5870 0.1500 rotation 0 0 1 2.9705 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2530 0.05 0.3 } } ] }
+    Pose { translation 1.8976 1.6277 0.1500 rotation 0 0 1 2.9344 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2233 0.05 0.3 } } ] }
+    Pose { translation 1.7120 1.6647 0.1500 rotation 0 0 1 2.9567 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1951 0.05 0.3 } } ] }
+    Pose { translation 1.5500 1.6893 0.1500 rotation 0 0 1 3.0310 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1729 0.05 0.3 } } ] }
+    Pose { translation 1.3580 1.7038 0.1500 rotation 0 0 1 3.0892 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2523 0.05 0.3 } } ] }
+    Pose { translation 1.0850 1.7493 0.1500 rotation 0 0 1 2.8955 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3439 0.05 0.3 } } ] }
+    Pose { translation 0.7854 1.8661 0.1500 rotation 0 0 1 2.6442 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3443 0.05 0.3 } } ] }
+    Pose { translation 0.5234 2.0543 0.1500 rotation 0 0 1 2.3940 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 0.3158 2.3018 0.1500 rotation 0 0 1 2.1435 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3452 0.05 0.3 } } ] }
+    Pose { translation 0.1766 2.5916 0.1500 rotation 0 0 1 1.8928 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3429 0.05 0.3 } } ] }
+    Pose { translation 0.1138 2.9074 0.1500 rotation 0 0 1 1.6424 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 0.1312 3.2303 0.1500 rotation 0 0 1 1.3915 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 0.2276 3.5377 0.1500 rotation 0 0 1 1.1412 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3432 0.05 0.3 } } ] }
+    Pose { translation 0.3972 3.8108 0.1500 rotation 0 0 1 0.8903 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3449 0.05 0.3 } } ] }
+    Pose { translation 0.6301 4.0344 0.1500 rotation 0 0 1 0.6398 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 0.9110 4.1934 0.1500 rotation 0 0 1 0.3895 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3445 0.05 0.3 } } ] }
+    Pose { translation 1.2187 4.2773 0.1500 rotation 0 0 1 0.1404 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3384 0.05 0.3 } } ] }
+    Pose { translation 1.4831 4.2998 0.1500 rotation 0 0 1 0.0021 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2334 0.05 0.3 } } ] }
+    Pose { translation 1.6900 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.8904 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.0908 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.2913 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.4917 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.6922 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.8926 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.0931 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.2935 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.4940 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.6944 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.8949 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.0953 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.2958 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.4962 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.6967 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.8971 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.0975 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.2980 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.4984 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.6989 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.8993 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 6.0998 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+  ] boundingObject Group { children [
+    Pose { translation 0.1502 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.3507 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.5511 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.7516 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.9520 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.1525 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.3529 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.5533 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.7538 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.9542 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.1547 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.3551 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.5556 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.7560 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.9565 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.1569 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.3574 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.5578 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.7583 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.9587 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.1592 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.3596 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.5600 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.7605 1.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.9602 1.1000 0.1500 rotation 0 0 1 -0.0000 children [ Box { size 0.2189 0.05 0.3 } ] }
+    Pose { translation 5.1105 1.1033 0.1500 rotation 0 0 1 0.0641 children [ Box { size 0.1219 0.05 0.3 } ] }
+    Pose { translation 5.1962 1.1185 0.1500 rotation 0 0 1 0.3307 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 5.2620 1.1505 0.1500 rotation 0 0 1 0.5746 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 5.3190 1.1988 0.1500 rotation 0 0 1 0.8264 children [ Box { size 0.0967 0.05 0.3 } ] }
+    Pose { translation 5.3625 1.2600 0.1500 rotation 0 0 1 1.0833 children [ Box { size 0.0948 0.05 0.3 } ] }
+    Pose { translation 5.3888 1.3289 0.1500 rotation 0 0 1 1.3290 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 5.3975 1.4024 0.1500 rotation 0 0 1 1.5759 children [ Box { size 0.0954 0.05 0.3 } ] }
+    Pose { translation 5.3874 1.4768 0.1500 rotation 0 0 1 1.8344 children [ Box { size 0.0961 0.05 0.3 } ] }
+    Pose { translation 5.3594 1.5457 0.1500 rotation 0 0 1 2.0835 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 5.3158 1.6047 0.1500 rotation 0 0 1 2.3280 children [ Box { size 0.0941 0.05 0.3 } ] }
+    Pose { translation 5.2577 1.6521 0.1500 rotation 0 0 1 2.5825 children [ Box { size 0.0971 0.05 0.3 } ] }
+    Pose { translation 5.1897 1.6837 0.1500 rotation 0 0 1 2.8373 children [ Box { size 0.0941 0.05 0.3 } ] }
+    Pose { translation 5.0923 1.6980 0.1500 rotation 0 0 1 3.0900 children [ Box { size 0.1442 0.05 0.3 } ] }
+    Pose { translation 4.9050 1.7118 0.1500 rotation 0 0 1 3.0570 children [ Box { size 0.2715 0.05 0.3 } ] }
+    Pose { translation 4.6653 1.7420 0.1500 rotation 0 0 1 2.9722 children [ Box { size 0.2520 0.05 0.3 } ] }
+    Pose { translation 4.4508 1.7826 0.1500 rotation 0 0 1 2.9348 children [ Box { size 0.2248 0.05 0.3 } ] }
+    Pose { translation 4.2645 1.8199 0.1500 rotation 0 0 1 2.9546 children [ Box { size 0.1951 0.05 0.3 } ] }
+    Pose { translation 4.1046 1.8442 0.1500 rotation 0 0 1 3.0327 children [ Box { size 0.1687 0.05 0.3 } ] }
+    Pose { translation 3.9635 1.8515 0.1500 rotation 0 0 1 -3.1290 children [ Box { size 0.1543 0.05 0.3 } ] }
+    Pose { translation 3.8281 1.8406 0.1500 rotation 0 0 1 -2.9955 children [ Box { size 0.1579 0.05 0.3 } ] }
+    Pose { translation 3.6839 1.8108 0.1500 rotation 0 0 1 -2.8874 children [ Box { size 0.1770 0.05 0.3 } ] }
+    Pose { translation 3.5209 1.7627 0.1500 rotation 0 0 1 -2.8269 children [ Box { size 0.2032 0.05 0.3 } ] }
+    Pose { translation 3.3337 1.7011 0.1500 rotation 0 0 1 -2.8207 children [ Box { size 0.2309 0.05 0.3 } ] }
+    Pose { translation 3.1192 1.6359 0.1500 rotation 0 0 1 -2.8694 children [ Box { size 0.2577 0.05 0.3 } ] }
+    Pose { translation 2.8771 1.5815 0.1500 rotation 0 0 1 -2.9672 children [ Box { size 0.2791 0.05 0.3 } ] }
+    Pose { translation 2.6161 1.5528 0.1500 rotation 0 0 1 -3.0954 children [ Box { size 0.2871 0.05 0.3 } ] }
+    Pose { translation 2.3547 1.5569 0.1500 rotation 0 0 1 3.0618 children [ Box { size 0.2769 0.05 0.3 } ] }
+    Pose { translation 2.1118 1.5870 0.1500 rotation 0 0 1 2.9705 children [ Box { size 0.2530 0.05 0.3 } ] }
+    Pose { translation 1.8976 1.6277 0.1500 rotation 0 0 1 2.9344 children [ Box { size 0.2233 0.05 0.3 } ] }
+    Pose { translation 1.7120 1.6647 0.1500 rotation 0 0 1 2.9567 children [ Box { size 0.1951 0.05 0.3 } ] }
+    Pose { translation 1.5500 1.6893 0.1500 rotation 0 0 1 3.0310 children [ Box { size 0.1729 0.05 0.3 } ] }
+    Pose { translation 1.3580 1.7038 0.1500 rotation 0 0 1 3.0892 children [ Box { size 0.2523 0.05 0.3 } ] }
+    Pose { translation 1.0850 1.7493 0.1500 rotation 0 0 1 2.8955 children [ Box { size 0.3439 0.05 0.3 } ] }
+    Pose { translation 0.7854 1.8661 0.1500 rotation 0 0 1 2.6442 children [ Box { size 0.3443 0.05 0.3 } ] }
+    Pose { translation 0.5234 2.0543 0.1500 rotation 0 0 1 2.3940 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 0.3158 2.3018 0.1500 rotation 0 0 1 2.1435 children [ Box { size 0.3452 0.05 0.3 } ] }
+    Pose { translation 0.1766 2.5916 0.1500 rotation 0 0 1 1.8928 children [ Box { size 0.3429 0.05 0.3 } ] }
+    Pose { translation 0.1138 2.9074 0.1500 rotation 0 0 1 1.6424 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 0.1312 3.2303 0.1500 rotation 0 0 1 1.3915 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 0.2276 3.5377 0.1500 rotation 0 0 1 1.1412 children [ Box { size 0.3432 0.05 0.3 } ] }
+    Pose { translation 0.3972 3.8108 0.1500 rotation 0 0 1 0.8903 children [ Box { size 0.3449 0.05 0.3 } ] }
+    Pose { translation 0.6301 4.0344 0.1500 rotation 0 0 1 0.6398 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 0.9110 4.1934 0.1500 rotation 0 0 1 0.3895 children [ Box { size 0.3445 0.05 0.3 } ] }
+    Pose { translation 1.2187 4.2773 0.1500 rotation 0 0 1 0.1404 children [ Box { size 0.3384 0.05 0.3 } ] }
+    Pose { translation 1.4831 4.2998 0.1500 rotation 0 0 1 0.0021 children [ Box { size 0.2334 0.05 0.3 } ] }
+    Pose { translation 1.6900 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.8904 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.0908 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.2913 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.4917 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.6922 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.8926 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.0931 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.2935 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.4940 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.6944 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.8949 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.0953 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.2958 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.4962 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.6967 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.8971 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.0975 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.2980 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.4984 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.6989 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.8993 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 6.0998 4.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+  ] } }
+Solid { name "pared_derecha" children [
+    Pose { translation 0.1502 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.3507 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.5511 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.7516 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 0.9520 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.1525 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.3529 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.5533 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.7538 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.9542 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.1547 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.3551 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.5556 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.7560 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.9565 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.1569 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.3574 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.5578 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.7583 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.9587 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.1592 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.3596 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.5600 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.7605 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.9617 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2219 0.05 0.3 } } ] }
+    Pose { translation 5.2112 0.1132 0.1500 rotation 0 0 1 0.0886 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3182 0.05 0.3 } } ] }
+    Pose { translation 5.5140 0.1788 0.1500 rotation 0 0 1 0.3272 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 5.8049 0.3202 0.1500 rotation 0 0 1 0.5781 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 6.0506 0.5283 0.1500 rotation 0 0 1 0.8284 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3431 0.05 0.3 } } ] }
+    Pose { translation 6.2366 0.7906 0.1500 rotation 0 0 1 1.0792 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3450 0.05 0.3 } } ] }
+    Pose { translation 6.3522 1.0922 0.1500 rotation 0 0 1 1.3297 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 6.3896 1.4127 0.1500 rotation 0 0 1 1.5800 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3444 0.05 0.3 } } ] }
+    Pose { translation 6.3465 1.7313 0.1500 rotation 0 0 1 1.8311 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3437 0.05 0.3 } } ] }
+    Pose { translation 6.2252 2.0299 0.1500 rotation 0 0 1 2.0813 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3460 0.05 0.3 } } ] }
+    Pose { translation 6.0332 2.2900 0.1500 rotation 0 0 1 2.3321 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3457 0.05 0.3 } } ] }
+    Pose { translation 5.7840 2.4935 0.1500 rotation 0 0 1 2.5826 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3427 0.05 0.3 } } ] }
+    Pose { translation 5.4920 2.6285 0.1500 rotation 0 0 1 2.8331 children [ Shape { appearance USE WALL_APP geometry Box { size 0.3457 0.05 0.3 } } ] }
+    Pose { translation 5.1993 2.6893 0.1500 rotation 0 0 1 3.0592 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2961 0.05 0.3 } } ] }
+    Pose { translation 4.9874 2.7071 0.1500 rotation 0 0 1 3.0556 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1692 0.05 0.3 } } ] }
+    Pose { translation 4.8299 2.7278 0.1500 rotation 0 0 1 2.9707 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1888 0.05 0.3 } } ] }
+    Pose { translation 4.6508 2.7623 0.1500 rotation 0 0 1 2.9346 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2161 0.05 0.3 } } ] }
+    Pose { translation 4.4440 2.8033 0.1500 rotation 0 0 1 2.9560 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2457 0.05 0.3 } } ] }
+    Pose { translation 4.2077 2.8376 0.1500 rotation 0 0 1 3.0349 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2720 0.05 0.3 } } ] }
+    Pose { translation 3.9493 2.8492 0.1500 rotation 0 0 1 -3.1282 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2862 0.05 0.3 } } ] }
+    Pose { translation 3.6862 2.8285 0.1500 rotation 0 0 1 -2.9971 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2827 0.05 0.3 } } ] }
+    Pose { translation 3.4383 2.7792 0.1500 rotation 0 0 1 -2.8894 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2638 0.05 0.3 } } ] }
+    Pose { translation 3.2167 2.7152 0.1500 rotation 0 0 1 -2.8278 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2377 0.05 0.3 } } ] }
+    Pose { translation 3.0230 2.6516 0.1500 rotation 0 0 1 -2.8202 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2100 0.05 0.3 } } ] }
+    Pose { translation 2.8544 2.5995 0.1500 rotation 0 0 1 -2.8676 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1831 0.05 0.3 } } ] }
+    Pose { translation 2.7062 2.5650 0.1500 rotation 0 0 1 -2.9652 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1615 0.05 0.3 } } ] }
+    Pose { translation 2.5699 2.5495 0.1500 rotation 0 0 1 -3.0955 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1535 0.05 0.3 } } ] }
+    Pose { translation 2.4316 2.5523 0.1500 rotation 0 0 1 3.0596 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1638 0.05 0.3 } } ] }
+    Pose { translation 2.2773 2.5727 0.1500 rotation 0 0 1 2.9686 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1878 0.05 0.3 } } ] }
+    Pose { translation 2.0979 2.6074 0.1500 rotation 0 0 1 2.9342 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2176 0.05 0.3 } } ] }
+    Pose { translation 1.8903 2.6484 0.1500 rotation 0 0 1 2.9579 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2458 0.05 0.3 } } ] }
+    Pose { translation 1.6561 2.6825 0.1500 rotation 0 0 1 3.0325 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2678 0.05 0.3 } } ] }
+    Pose { translation 1.4488 2.6991 0.1500 rotation 0 0 1 3.1039 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1884 0.05 0.3 } } ] }
+    Pose { translation 1.3278 2.7114 0.1500 rotation 0 0 1 2.8991 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0960 0.05 0.3 } } ] }
+    Pose { translation 1.2578 2.7387 0.1500 rotation 0 0 1 2.6402 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0956 0.05 0.3 } } ] }
+    Pose { translation 1.1976 2.7820 0.1500 rotation 0 0 1 2.3931 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 1.1503 2.8383 0.1500 rotation 0 0 1 2.1476 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0946 0.05 0.3 } } ] }
+    Pose { translation 1.1178 2.9061 0.1500 rotation 0 0 1 1.8910 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0969 0.05 0.3 } } ] }
+    Pose { translation 1.1032 2.9794 0.1500 rotation 0 0 1 1.6386 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 1.1072 3.0525 0.1500 rotation 0 0 1 1.3947 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0938 0.05 0.3 } } ] }
+    Pose { translation 1.1295 3.1237 0.1500 rotation 0 0 1 1.1434 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0966 0.05 0.3 } } ] }
+    Pose { translation 1.1691 3.1875 0.1500 rotation 0 0 1 0.8862 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0949 0.05 0.3 } } ] }
+    Pose { translation 1.2223 3.2386 0.1500 rotation 0 0 1 0.6402 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0937 0.05 0.3 } } ] }
+    Pose { translation 1.2867 3.2750 0.1500 rotation 0 0 1 0.3936 children [ Shape { appearance USE WALL_APP geometry Box { size 0.0953 0.05 0.3 } } ] }
+    Pose { translation 1.3618 3.2947 0.1500 rotation 0 0 1 0.1280 children [ Shape { appearance USE WALL_APP geometry Box { size 0.1014 0.05 0.3 } } ] }
+    Pose { translation 1.4960 3.2999 0.1500 rotation 0 0 1 0.0006 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2075 0.05 0.3 } } ] }
+    Pose { translation 1.6900 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 1.8904 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.0908 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.2913 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.4917 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.6922 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 2.8926 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.0931 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.2935 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.4940 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.6944 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 3.8949 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.0953 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.2958 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.4962 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.6967 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 4.8971 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.0975 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.2980 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.4984 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.6989 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 5.8993 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+    Pose { translation 6.0998 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Shape { appearance USE WALL_APP geometry Box { size 0.2204 0.05 0.3 } } ] }
+  ] boundingObject Group { children [
+    Pose { translation 0.1502 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.3507 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.5511 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.7516 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 0.9520 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.1525 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.3529 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.5533 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.7538 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.9542 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.1547 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.3551 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.5556 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.7560 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.9565 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.1569 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.3574 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.5578 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.7583 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.9587 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.1592 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.3596 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.5600 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.7605 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.9617 0.1000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2219 0.05 0.3 } ] }
+    Pose { translation 5.2112 0.1132 0.1500 rotation 0 0 1 0.0886 children [ Box { size 0.3182 0.05 0.3 } ] }
+    Pose { translation 5.5140 0.1788 0.1500 rotation 0 0 1 0.3272 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 5.8049 0.3202 0.1500 rotation 0 0 1 0.5781 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 6.0506 0.5283 0.1500 rotation 0 0 1 0.8284 children [ Box { size 0.3431 0.05 0.3 } ] }
+    Pose { translation 6.2366 0.7906 0.1500 rotation 0 0 1 1.0792 children [ Box { size 0.3450 0.05 0.3 } ] }
+    Pose { translation 6.3522 1.0922 0.1500 rotation 0 0 1 1.3297 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 6.3896 1.4127 0.1500 rotation 0 0 1 1.5800 children [ Box { size 0.3444 0.05 0.3 } ] }
+    Pose { translation 6.3465 1.7313 0.1500 rotation 0 0 1 1.8311 children [ Box { size 0.3437 0.05 0.3 } ] }
+    Pose { translation 6.2252 2.0299 0.1500 rotation 0 0 1 2.0813 children [ Box { size 0.3460 0.05 0.3 } ] }
+    Pose { translation 6.0332 2.2900 0.1500 rotation 0 0 1 2.3321 children [ Box { size 0.3457 0.05 0.3 } ] }
+    Pose { translation 5.7840 2.4935 0.1500 rotation 0 0 1 2.5826 children [ Box { size 0.3427 0.05 0.3 } ] }
+    Pose { translation 5.4920 2.6285 0.1500 rotation 0 0 1 2.8331 children [ Box { size 0.3457 0.05 0.3 } ] }
+    Pose { translation 5.1993 2.6893 0.1500 rotation 0 0 1 3.0592 children [ Box { size 0.2961 0.05 0.3 } ] }
+    Pose { translation 4.9874 2.7071 0.1500 rotation 0 0 1 3.0556 children [ Box { size 0.1692 0.05 0.3 } ] }
+    Pose { translation 4.8299 2.7278 0.1500 rotation 0 0 1 2.9707 children [ Box { size 0.1888 0.05 0.3 } ] }
+    Pose { translation 4.6508 2.7623 0.1500 rotation 0 0 1 2.9346 children [ Box { size 0.2161 0.05 0.3 } ] }
+    Pose { translation 4.4440 2.8033 0.1500 rotation 0 0 1 2.9560 children [ Box { size 0.2457 0.05 0.3 } ] }
+    Pose { translation 4.2077 2.8376 0.1500 rotation 0 0 1 3.0349 children [ Box { size 0.2720 0.05 0.3 } ] }
+    Pose { translation 3.9493 2.8492 0.1500 rotation 0 0 1 -3.1282 children [ Box { size 0.2862 0.05 0.3 } ] }
+    Pose { translation 3.6862 2.8285 0.1500 rotation 0 0 1 -2.9971 children [ Box { size 0.2827 0.05 0.3 } ] }
+    Pose { translation 3.4383 2.7792 0.1500 rotation 0 0 1 -2.8894 children [ Box { size 0.2638 0.05 0.3 } ] }
+    Pose { translation 3.2167 2.7152 0.1500 rotation 0 0 1 -2.8278 children [ Box { size 0.2377 0.05 0.3 } ] }
+    Pose { translation 3.0230 2.6516 0.1500 rotation 0 0 1 -2.8202 children [ Box { size 0.2100 0.05 0.3 } ] }
+    Pose { translation 2.8544 2.5995 0.1500 rotation 0 0 1 -2.8676 children [ Box { size 0.1831 0.05 0.3 } ] }
+    Pose { translation 2.7062 2.5650 0.1500 rotation 0 0 1 -2.9652 children [ Box { size 0.1615 0.05 0.3 } ] }
+    Pose { translation 2.5699 2.5495 0.1500 rotation 0 0 1 -3.0955 children [ Box { size 0.1535 0.05 0.3 } ] }
+    Pose { translation 2.4316 2.5523 0.1500 rotation 0 0 1 3.0596 children [ Box { size 0.1638 0.05 0.3 } ] }
+    Pose { translation 2.2773 2.5727 0.1500 rotation 0 0 1 2.9686 children [ Box { size 0.1878 0.05 0.3 } ] }
+    Pose { translation 2.0979 2.6074 0.1500 rotation 0 0 1 2.9342 children [ Box { size 0.2176 0.05 0.3 } ] }
+    Pose { translation 1.8903 2.6484 0.1500 rotation 0 0 1 2.9579 children [ Box { size 0.2458 0.05 0.3 } ] }
+    Pose { translation 1.6561 2.6825 0.1500 rotation 0 0 1 3.0325 children [ Box { size 0.2678 0.05 0.3 } ] }
+    Pose { translation 1.4488 2.6991 0.1500 rotation 0 0 1 3.1039 children [ Box { size 0.1884 0.05 0.3 } ] }
+    Pose { translation 1.3278 2.7114 0.1500 rotation 0 0 1 2.8991 children [ Box { size 0.0960 0.05 0.3 } ] }
+    Pose { translation 1.2578 2.7387 0.1500 rotation 0 0 1 2.6402 children [ Box { size 0.0956 0.05 0.3 } ] }
+    Pose { translation 1.1976 2.7820 0.1500 rotation 0 0 1 2.3931 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 1.1503 2.8383 0.1500 rotation 0 0 1 2.1476 children [ Box { size 0.0946 0.05 0.3 } ] }
+    Pose { translation 1.1178 2.9061 0.1500 rotation 0 0 1 1.8910 children [ Box { size 0.0969 0.05 0.3 } ] }
+    Pose { translation 1.1032 2.9794 0.1500 rotation 0 0 1 1.6386 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 1.1072 3.0525 0.1500 rotation 0 0 1 1.3947 children [ Box { size 0.0938 0.05 0.3 } ] }
+    Pose { translation 1.1295 3.1237 0.1500 rotation 0 0 1 1.1434 children [ Box { size 0.0966 0.05 0.3 } ] }
+    Pose { translation 1.1691 3.1875 0.1500 rotation 0 0 1 0.8862 children [ Box { size 0.0949 0.05 0.3 } ] }
+    Pose { translation 1.2223 3.2386 0.1500 rotation 0 0 1 0.6402 children [ Box { size 0.0937 0.05 0.3 } ] }
+    Pose { translation 1.2867 3.2750 0.1500 rotation 0 0 1 0.3936 children [ Box { size 0.0953 0.05 0.3 } ] }
+    Pose { translation 1.3618 3.2947 0.1500 rotation 0 0 1 0.1280 children [ Box { size 0.1014 0.05 0.3 } ] }
+    Pose { translation 1.4960 3.2999 0.1500 rotation 0 0 1 0.0006 children [ Box { size 0.2075 0.05 0.3 } ] }
+    Pose { translation 1.6900 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 1.8904 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.0908 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.2913 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.4917 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.6922 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 2.8926 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.0931 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.2935 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.4940 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.6944 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 3.8949 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.0953 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.2958 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.4962 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.6967 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 4.8971 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.0975 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.2980 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.4984 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.6989 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 5.8993 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+    Pose { translation 6.0998 3.3000 0.1500 rotation 0 0 1 0.0000 children [ Box { size 0.2204 0.05 0.3 } ] }
+  ] } }
+Solid { name "pared_salida" children [
+    Pose { translation 0.0000 0.6000 0.1500 rotation 0 0 1 -1.5708 children [ Shape { appearance USE WALL_APP geometry Box { size 1.0200 0.05 0.3 } } ] }
+  ] boundingObject Group { children [
+    Pose { translation 0.0000 0.6000 0.1500 rotation 0 0 1 -1.5708 children [ Box { size 1.0200 0.05 0.3 } ] }
+  ] } }
+DEF OBST_0 Solid { translation 2.3551 0.8500 0.15 rotation 0 0 1 0.0000 children [ Shape { appearance USE OBST_APP geometry DEF B0 Box { size 0.2335 0.2335 0.3 } } ] name "obstaculo_caja_0" boundingObject USE B0 }
+DEF OBST_1 Solid { translation 4.9609 0.3500 0.2 children [ Shape { appearance USE CYL_APP geometry DEF C1 Cylinder { radius 0.1189 height 0.4 } } ] name "obstaculo_cilindro_1" boundingObject USE C1 }
+DEF OBST_2 Solid { translation 5.3051 2.0429 0.15 rotation 0 0 1 2.8355 children [ Shape { appearance USE OBST_APP geometry DEF B2 Box { size 0.1353 0.1353 0.3 } } ] name "obstaculo_caja_2" boundingObject USE B2 }
+DEF OBST_3 Solid { translation 2.8760 2.3447 0.2 children [ Shape { appearance USE CYL_APP geometry DEF C3 Cylinder { radius 0.1138 height 0.4 } } ] name "obstaculo_cilindro_3" boundingObject USE C3 }
+DEF OBST_4 Solid { translation 0.5179 2.4308 0.15 rotation 0 0 1 2.1454 children [ Shape { appearance USE OBST_APP geometry DEF B4 Box { size 0.2117 0.2117 0.3 } } ] name "obstaculo_caja_4" boundingObject USE B4 }
+DEF OBST_5 Solid { translation 2.3414 4.0500 0.2 children [ Shape { appearance USE CYL_APP geometry DEF C5 Cylinder { radius 0.1070 height 0.4 } } ] name "obstaculo_cilindro_5" boundingObject USE C5 }
+DEF OBST_6 Solid { translation 4.6967 3.5500 0.15 rotation 0 0 1 0.0000 children [ Shape { appearance USE OBST_APP geometry DEF B6 Box { size 0.2355 0.2355 0.3 } } ] name "obstaculo_caja_6" boundingObject USE B6 }
+Solid { name "zona_resbaladiza" children [
+    Shape { appearance USE SLIP_APP geometry IndexedFaceSet { coord Coordinate { point [ 4.1592 1.1000 0.0025 4.2594 1.1000 0.0025 4.3596 1.1000 0.0025 4.4598 1.1000 0.0025 4.5600 1.1000 0.0025 4.6603 1.1000 0.0025 4.7605 1.1000 0.0025 4.8607 1.1000 0.0025 4.9609 1.1000 0.0025 5.0597 1.1000 0.0025 5.1227 1.1011 0.0025 5.1613 1.1065 0.0025 5.1954 1.1157 0.0025 5.2311 1.1305 0.0025 5.2647 1.1494 0.0025 4.1592 0.1000 0.0025 4.2594 0.1000 0.0025 4.3596 0.1000 0.0025 4.4598 0.1000 0.0025 4.5600 0.1000 0.0025 4.6603 0.1000 0.0025 4.7605 0.1000 0.0025 4.8607 0.1000 0.0025 4.9609 0.1000 0.0025 5.0627 0.1000 0.0025 5.1999 0.1041 0.0025 5.3597 0.1264 0.0025 5.5189 0.1695 0.0025 5.6684 0.2312 0.0025 5.8092 0.3106 0.0025 ] } coordIndex [ 0 15 16 1 -1 1 16 17 2 -1 2 17 18 3 -1 3 18 19 4 -1 4 19 20 5 -1 5 20 21 6 -1 6 21 22 7 -1 7 22 23 8 -1 8 23 24 9 -1 9 24 25 10 -1 10 25 26 11 -1 11 26 27 12 -1 12 27 28 13 -1 13 28 29 14 -1 ] } }
+  ] contactMaterial "slippery" boundingObject Group { children [
+    Pose { translation 4.2093 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.3095 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.4097 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.5099 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.6102 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.7104 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.8106 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 4.9108 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 5.0110 0.6000 0.0000 rotation 0 0 1 0.0000 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 5.1112 0.6013 0.0000 rotation 0 0 1 0.0263 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 5.2109 0.6095 0.0000 rotation 0 0 1 0.1384 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 5.3088 0.6295 0.0000 rotation 0 0 1 0.2643 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 5.4034 0.6617 0.0000 rotation 0 0 1 0.3914 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 5.4933 0.7054 0.0000 rotation 0 0 1 0.5139 children [ Box { size 0.1301 1.0000 0.004 } ] }
+  ] } }
+Solid { name "zona_rugosa" children [
+    Shape { appearance USE ROUGH_APP geometry IndexedFaceSet { coord Coordinate { point [ 1.7981 1.6486 0.0025 1.7090 1.6664 0.0025 1.6260 1.6808 0.0025 1.5481 1.6913 0.0025 1.4740 1.6977 0.0025 1.3915 1.7001 0.0025 1.2420 1.7099 0.0025 1.0834 1.7394 0.0025 0.9279 1.7888 0.0025 0.7797 1.8578 0.0025 0.6429 1.9435 0.0025 0.5160 2.0469 0.0025 0.4039 2.1651 0.0025 0.3081 2.2949 0.0025 0.2277 2.4384 0.0025 0.1670 2.5889 0.0025 0.1255 2.7448 0.0025 0.1034 2.9084 0.0025 0.1022 3.0699 0.0025 2.0013 2.6278 0.0025 1.8938 2.6492 0.0025 1.7793 2.6690 0.0025 1.6586 2.6852 0.0025 1.5330 2.6960 0.0025 1.4151 2.6998 0.0025 1.3647 2.7023 0.0025 1.3264 2.7094 0.0025 1.2909 2.7206 0.0025 1.2577 2.7362 0.0025 1.2247 2.7569 0.0025 1.1963 2.7798 0.0025 1.1706 2.8071 0.0025 1.1475 2.8384 0.0025 1.1299 2.8696 0.0025 1.1157 2.9050 0.0025 1.1057 2.9426 0.0025 1.1010 2.9774 0.0025 1.1007 3.0162 0.0025 ] } coordIndex [ 0 19 20 1 -1 1 20 21 2 -1 2 21 22 3 -1 3 22 23 4 -1 4 23 24 5 -1 5 24 25 6 -1 6 25 26 7 -1 7 26 27 8 -1 8 27 28 9 -1 9 28 29 10 -1 10 29 30 11 -1 11 30 31 12 -1 12 31 32 13 -1 13 32 33 14 -1 14 33 34 15 -1 15 34 35 16 -1 16 35 36 17 -1 17 36 37 18 -1 ] } }
+  ] contactMaterial "rough" boundingObject Group { children [
+    Pose { translation 1.8505 2.1480 0.0000 rotation 0 0 1 2.9446 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.7520 2.1664 0.0000 rotation 0 0 1 2.9702 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.6530 2.1816 0.0000 rotation 0 0 1 3.0080 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.5534 2.1925 0.0000 rotation 0 0 1 3.0559 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.4534 2.1984 0.0000 rotation 0 0 1 3.1104 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.3533 2.2030 0.0000 rotation 0 0 1 3.0803 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.2541 2.2153 0.0000 rotation 0 0 1 2.9574 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 1.1572 2.2395 0.0000 rotation 0 0 1 2.8349 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 1.0640 2.2758 0.0000 rotation 0 0 1 2.7049 children [ Box { size 0.1302 1.0000 0.004 } ] }
+    Pose { translation 0.9762 2.3236 0.0000 rotation 0 0 1 2.5820 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.8950 2.3818 0.0000 rotation 0 0 1 2.4586 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.8217 2.4497 0.0000 rotation 0 0 1 2.3291 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.7575 2.5264 0.0000 rotation 0 0 1 2.2066 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.7033 2.6103 0.0000 rotation 0 0 1 2.0819 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.6601 2.7005 0.0000 rotation 0 0 1 1.9537 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.6285 2.7953 0.0000 rotation 0 0 1 1.8312 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.6089 2.8933 0.0000 rotation 0 0 1 1.7051 children [ Box { size 0.1301 1.0000 0.004 } ] }
+    Pose { translation 0.6018 2.9930 0.0000 rotation 0 0 1 1.5783 children [ Box { size 0.1301 1.0000 0.004 } ] }
+  ] } }
+Solid { name "linea_salida" children [ Pose { translation 0.0500 0.6000 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.05 1.0000 0.002 } } ] } ] }
+Solid { name "meta" children [ Pose { translation 6.1199 3.3625 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 3.4875 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 3.6125 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 3.7375 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 3.8625 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 3.9875 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 4.1125 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1199 4.2375 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.3625 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.4875 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.6125 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.7375 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.8625 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 3.9875 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 4.1125 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE BLACK_APP geometry Box { size 0.06 0.1250 0.002 } } ] } Pose { translation 6.1799 4.2375 0.003 rotation 0 0 1 0.0000 children [ Shape { appearance USE WHITE_APP geometry Box { size 0.06 0.1250 0.002 } } ] } ] }
+DEF HUMAN_0 Pedestrian { translation 3.9434 1.5531 1.27 name "peaton_0" controller "race_pedestrian" controllerArgs [ "--a=3.9434 1.5531" "--b=3.8692 3.1513" "--speed=0.25" "--pause=6.0" "--phase=0.0" ] }
+DEF HUMAN_1 Pedestrian { translation 2.4917 4.6000 1.27 name "peaton_1" controller "race_pedestrian" controllerArgs [ "--a=2.4917 4.6000" "--b=2.4917 3.0000" "--speed=0.25" "--pause=6.0" "--phase=3.0" ] }
+DEF RACER_DAC Darwin-op {
+  translation 0.7516 0.8200 0.236
+  rotation 0 0 1 0.0000
+  name "DAC"
+  controller "darwin_walker"
+  channel 1
+  plasticColor 0.85 0.1 0.1
+  bodySlot [ Pose { translation -0.06 0 0.02 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.1 0.1 roughness 0.4 metalness 0 emissiveColor 0.85 0.1 0.1 } geometry Box { size 0.03 0.12 0.08 } } ] } ]
+}
+DEF RACER_PPO Darwin-op {
+  translation 0.7516 0.3800 0.236
+  rotation 0 0 1 0.0000
+  name "PPO"
+  controller "darwin_walker"
+  channel 2
+  plasticColor 0.1 0.35 0.9
+  bodySlot [ Pose { translation -0.06 0 0.02 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.35 0.9 roughness 0.4 metalness 0 emissiveColor 0.1 0.35 0.9 } geometry Box { size 0.03 0.12 0.08 } } ] } ]
+}
+DEF RACER_DQN Darwin-op {
+  translation 0.3507 0.8200 0.236
+  rotation 0 0 1 0.0000
+  name "DQN"
+  controller "darwin_walker"
+  channel 3
+  plasticColor 0.1 0.7 0.2
+  bodySlot [ Pose { translation -0.06 0 0.02 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.7 0.2 roughness 0.4 metalness 0 emissiveColor 0.1 0.7 0.2 } geometry Box { size 0.03 0.12 0.08 } } ] } ]
+}
+DEF RACER_A2C Darwin-op {
+  translation 0.3507 0.3800 0.236
+  rotation 0 0 1 0.0000
+  name "A2C"
+  controller "darwin_walker"
+  channel 4
+  plasticColor 0.95 0.65 0.05
+  bodySlot [ Pose { translation -0.06 0 0.02 children [ Shape { appearance PBRAppearance { baseColor 0.95 0.65 0.05 roughness 0.4 metalness 0 emissiveColor 0.95 0.65 0.05 } geometry Box { size 0.03 0.12 0.08 } } ] } ]
+}
+DEF RACE_BRAIN Robot {
+  name "race_brain"
+  controller "race_brain"
+  controllerArgs [ "--track=../../tracks/carrera_M.json" "--policies=../../policies" ]
+  supervisor TRUE
+  children [
+    Emitter { name "emitter" channel 1 range -1 }
+    Receiver { name "receiver" channel -1 }
+  ]
+}
